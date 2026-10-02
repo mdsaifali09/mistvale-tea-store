@@ -1,0 +1,3508 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mistvale Tea — Premium Tea, Thoughtfully Crafted</title>
+  <meta name="description" content="Shop premium black, green and herbal teas and thoughtful tea gifts from Mistvale.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Mistvale Tea — Premium Tea, Thoughtfully Crafted">
+  <meta property="og:description" content="Premium teas, blends and gifts for everyday rituals.">
+  <meta property="og:type" content="website">
+  <style>
+    :root {
+      --ink: #17352f;
+      --ink2: #31584f;
+      --cream: #f7f4ec;
+      --paper: #fffdf8;
+      --sage: #dfe9df;
+      --gold: #b98a3d;
+      --gold2: #8d6729;
+      --muted: #68766f;
+      --line: #dce4dc;
+      --danger: #a53c32;
+      --success: #287653;
+      --shadow: 0 18px 50px rgba(23, 53, 47, .10);
+      --radius: 18px
+    }
+
+    .pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 12px;
+      display: block;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.55
+    }
+
+    button,
+    input,
+    select {
+      font: inherit
+    }
+
+    button {
+      cursor: pointer
+    }
+
+    button:disabled {
+      cursor: not-allowed
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 32px));
+      margin: auto
+    }
+
+    .announcement {
+      background: var(--ink);
+      color: #fff;
+      text-align: center;
+      font-size: 12px;
+      letter-spacing: .08em;
+      padding: 9px 14px
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 253, 248, .97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line)
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      gap: 24px
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      white-space: nowrap
+    }
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border: 1.5px solid var(--gold);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-size: 18px
+    }
+
+    .logo img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  display: block;
+}
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      font-size: 14px;
+      color: var(--ink2);
+      margin-left: auto
+    }
+
+    .nav-links a:hover {
+      color: var(--gold2)
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    .search {
+      display: flex;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      overflow: hidden
+    }
+
+    .search input {
+      width: 175px;
+      border: 0;
+      outline: 0;
+      padding: 10px 14px;
+      background: transparent
+    }
+
+    .cart-btn {
+      position: relative;
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      padding: 10px;
+      border-radius: 10px
+    }
+
+    .cart-btn:hover {
+      background: #edf4eb
+    }
+
+    .cart-count {
+      position: absolute;
+      top: 2px;
+      right: 0;
+      min-width: 18px;
+      height: 18px;
+      padding: 0 5px;
+      border-radius: 99px;
+      background: var(--gold);
+      color: #fff;
+      font-size: 10px;
+      display: grid;
+      place-items: center
+    }
+
+    .hero {
+      padding: 82px 0 64px;
+      background: radial-gradient(circle at 85% 25%, #e6eee2 0, transparent 34%), linear-gradient(135deg, #f9f6ed, #edf3eb)
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      align-items: center;
+      gap: 54px
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      color: var(--gold2);
+      font-weight: 800
+    }
+
+    .hero h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(44px, 6vw, 76px);
+      line-height: .98;
+      margin: 14px 0 22px;
+      letter-spacing: -.045em
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 620px
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px
+    }
+
+    .btn {
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      padding: 12px 20px;
+      font-weight: 750
+    }
+
+    .btn-primary {
+      background: var(--ink);
+      color: #fff
+    }
+
+    .btn-primary:hover {
+      background: #0f2924;
+      transform: translateY(-2px)
+    }
+
+    .btn-secondary {
+      background: transparent
+    }
+
+    .btn-secondary:hover {
+      background: #fff
+    }
+
+    .hero-art {
+      min-height: 390px;
+      border-radius: 28px;
+      background: linear-gradient(145deg, #274d43, #16342e);
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: grid;
+      place-items: center
+    }
+
+    .hero-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+    .hero-art:before,
+    .hero-art:after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(255, 255, 255, .2);
+      border-radius: 50%
+    }
+
+    .hero-art:before {
+      width: 330px;
+      height: 330px
+    }
+
+    .hero-art:after {
+      width: 230px;
+      height: 230px
+    }
+
+    .tea-cup {
+      position: relative;
+      z-index: 2;
+      width: 180px;
+      height: 120px;
+      border: 10px solid #f4ead3;
+      border-radius: 0 0 90px 90px;
+      background: #6f4930;
+      box-shadow: 0 14px 0 -5px #d9c5a1
+    }
+
+    .tea-cup:after {
+      content: "";
+      position: absolute;
+      width: 70px;
+      height: 65px;
+      border: 10px solid #f4ead3;
+      border-left: 0;
+      border-radius: 0 45px 45px 0;
+      right: -70px;
+      top: 10px
+    }
+
+    .steam {
+      position: absolute;
+      z-index: 3;
+      top: 78px;
+      width: 80px;
+      height: 130px;
+      border-left: 2px solid rgba(255, 255, 255, .6);
+      border-radius: 50%;
+      transform: rotate(12deg)
+    }
+
+    .section {
+      padding: 74px 0
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: end;
+      margin-bottom: 28px
+    }
+
+    .section h2 {
+      font: 700 clamp(30px, 4vw, 44px)/1.05 Georgia, serif;
+      margin: 7px 0
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 600px
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 24px
+    }
+
+    .filter {
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 999px;
+      padding: 9px 15px;
+      color: var(--ink2)
+    }
+
+    .filter.active,
+    .filter:hover {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink)
+    }
+
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 22px
+    }
+
+    .sort {
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 10px;
+      padding: 10px 12px;
+      color: var(--ink)
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px
+    }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 7px 25px rgba(23, 53, 47, .04)
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow)
+    }
+
+    .product-image {
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(145deg, #e7eee4, #f5f0e4);
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 12px;
+  display: block;
+}
+
+    .wish {
+      position: absolute;
+      z-index: 2;
+      right: 12px;
+      top: 12px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: #fff;
+      font-size: 18px;
+      color: #6f7974
+    }
+
+    .wish.active {
+      color: var(--danger)
+    }
+
+    .badge {
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      background: var(--gold);
+      color: #fff;
+      padding: 5px 9px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .06em
+    }
+
+    .product-body {
+      padding: 18px
+    }
+
+    .category {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--gold2);
+      font-weight: 800
+    }
+
+    .product-title {
+      font: 700 19px/1.2 Georgia, serif;
+      margin: 7px 0;
+      color: var(--ink)
+    }
+
+    .rating {
+      font-size: 12px;
+      color: #8a6b2d;
+      margin-bottom: 9px
+    }
+
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px
+    }
+
+    .price {
+      font-weight: 850;
+      font-size: 18px
+    }
+
+    .add {
+      border: 0;
+      border-radius: 10px;
+      padding: 10px 13px;
+      background: var(--ink);
+      color: #fff;
+      font-weight: 750
+    }
+
+    .add:hover {
+      background: #0d2722
+    }
+
+    .add:disabled {
+      background: #c8cfca
+    }
+
+    .empty {
+      grid-column: 1/-1;
+      text-align: center;
+      padding: 50px;
+      background: #fff;
+      border: 1px dashed var(--line);
+      border-radius: var(--radius);
+      color: var(--muted)
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px
+    }
+
+    .feature {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px
+    }
+
+    .feature b {
+      display: block;
+      margin-bottom: 7px
+    }
+
+    .feature p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px
+    }
+
+    .faq {
+      max-width: 850px;
+      margin: auto
+    }
+
+    .faq-item {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      margin: 10px 0;
+      overflow: hidden
+    }
+
+    .faq-item summary {
+      padding: 18px;
+      font-weight: 750;
+      cursor: pointer
+    }
+
+    .faq-item p {
+      padding: 0 18px 18px;
+      margin: 0;
+      color: var(--muted)
+    }
+
+    .newsletter {
+      background: var(--ink);
+      color: #fff;
+      border-radius: 28px;
+      padding: 42px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center
+    }
+
+    .newsletter p {
+      color: #c8d5d0
+    }
+
+    .news-form {
+      display: flex;
+      background: #fff;
+      border-radius: 999px;
+      padding: 5px
+    }
+
+    .news-form input {
+      border: 0;
+      outline: 0;
+      flex: 1;
+      padding: 11px 14px;
+      min-width: 0
+    }
+
+    .news-form button {
+      border: 0;
+      border-radius: 999px;
+      background: var(--gold);
+      color: #fff;
+      padding: 11px 18px;
+      font-weight: 800
+    }
+
+    footer {
+      background: #102a25;
+      color: #d7e1dc;
+      padding: 48px 0 24px
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      gap: 40px
+    }
+
+    footer h3 {
+      color: #fff;
+      margin-top: 0
+    }
+
+    footer p,
+    footer a {
+      color: #aebdb7;
+      font-size: 14px
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, .12);
+      margin-top: 30px;
+      padding-top: 18px;
+      font-size: 12px;
+      color: #879991
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 25, 22, .55);
+      z-index: 100;
+      display: none
+    }
+
+    .overlay.open {
+      display: block
+    }
+
+    .drawer {
+      position: fixed;
+      z-index: 101;
+      right: 0;
+      top: 0;
+      width: min(470px, 100%);
+      height: 100%;
+      background: #fffdf8;
+      transform: translateX(100%);
+      transition: .25s ease;
+      box-shadow: -15px 0 50px rgba(0, 0, 0, .18);
+      display: flex;
+      flex-direction: column
+    }
+
+    .drawer.open {
+      transform: translateX(0)
+    }
+
+    .drawer-head {
+      padding: 22px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center
+    }
+
+    .drawer-body {
+      padding: 20px;
+      overflow: auto;
+      flex: 1
+    }
+
+    .cart-item {
+      display: grid;
+      grid-template-columns: 70px 1fr auto;
+      gap: 12px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .cart-thumb {
+      width: 70px;
+      height: 70px;
+      border-radius: 12px;
+      background: var(--sage);
+      display: grid;
+      place-items: center;
+      font-size: 23px
+    }
+
+    .cart-item h4 {
+      margin: 0 0 5px;
+      font-size: 14px
+    }
+
+    .qty {
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    .qty button {
+      width: 28px;
+      height: 28px;
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 8px
+    }
+
+    .remove {
+      border: 0;
+      background: transparent;
+      color: var(--danger);
+      font-size: 12px
+    }
+
+    .cart-footer {
+      border-top: 1px solid var(--line);
+      padding: 18px
+    }
+
+    .coupon {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 15px
+    }
+
+    .coupon input,
+    .pin input {
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      padding: 10px;
+      min-width: 0;
+      flex: 1
+    }
+
+    .coupon button,
+    .pin button {
+      border: 0;
+      background: var(--ink);
+      color: #fff;
+      border-radius: 9px;
+      padding: 10px 14px
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      margin: 8px 0;
+      color: var(--muted)
+    }
+
+    .summary-row.total {
+      font-weight: 850;
+      color: var(--ink);
+      font-size: 18px;
+      padding-top: 9px;
+      border-top: 1px solid var(--line)
+    }
+
+    .notice {
+      font-size: 12px;
+      margin: 8px 0
+    }
+
+    .notice.success {
+      color: var(--success)
+    }
+
+    .notice.error {
+      color: var(--danger)
+    }
+
+    .pin {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px
+    }
+
+    .quickview {
+      position: fixed;
+      z-index: 102;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(.96);
+      width: min(680px, calc(100% - 30px));
+      background: #fffdf8;
+      border-radius: 20px;
+      display: none;
+      box-shadow: var(--shadow);
+      overflow: hidden
+    }
+
+    .quickview.open {
+      display: block;
+      transform: translate(-50%, -50%) scale(1)
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr
+    }
+
+    .quick-art {
+      min-height: 350px;
+      background: linear-gradient(145deg, #e7eee4, #f5f0e4);
+      display: grid;
+      place-items: center
+    }
+
+    .quick-copy {
+      padding: 30px
+    }
+
+    .close {
+      border: 0;
+      background: transparent;
+      font-size: 24px;
+      color: var(--muted)
+    }
+
+    .toast {
+      position: fixed;
+      z-index: 200;
+      left: 50%;
+      bottom: 24px;
+      transform: translate(-50%, 20px);
+      background: var(--ink);
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 999px;
+      opacity: 0;
+      pointer-events: none;
+      transition: .2s
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translate(-50%, 0)
+    }
+
+    .sold {
+      color: var(--danger);
+      font-size: 12px;
+      font-weight: 700
+    }
+
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important
+    }
+
+    :focus-visible {
+      outline: 3px solid #d6a74f !important;
+      outline-offset: 3px
+    }
+
+    @media(max-width:900px) {
+      .nav-links {
+        display: none
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr
+      }
+
+      .products {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .newsletter {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media(max-width:600px) {
+      .container {
+        width: calc(100% - 22px)
+      }
+
+      .nav {
+        gap: 8px;
+        min-height: 68px
+      }
+
+      .logo span:last-child {
+        display: none
+      }
+
+      .search input {
+        width: 105px
+      }
+
+      .hero {
+        padding: 52px 0 42px
+      }
+
+      .hero h1 {
+        font-size: 46px
+      }
+
+      .hero-art {
+        min-height: 280px
+      }
+
+      .products {
+        grid-template-columns: 1fr
+      }
+
+      .features,
+      .footer-grid {
+        grid-template-columns: 1fr
+      }
+
+      .section {
+        padding: 52px 0
+      }
+
+      .toolbar {
+        align-items: stretch;
+        flex-direction: column
+      }
+
+      .newsletter {
+        padding: 28px 20px
+      }
+
+      .news-form {
+        border-radius: 15px;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        padding: 0
+      }
+
+      .news-form input,
+      .news-form button {
+        border-radius: 10px
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How should I store tea?","acceptedAnswer":{"@type":"Answer","text":"Store tea sealed in a cool, dry place away from direct sunlight, moisture and strong odours."}},
+{"@type":"Question","name":"Do you offer gift boxes?","acceptedAnswer":{"@type":"Answer","text":"Yes. The current collection includes the Tea Lover's Sampler Gift Box."}},
+{"@type":"Question","name":"Can I check delivery serviceability?","acceptedAnswer":{"@type":"Answer","text":"Yes. Enter a valid six-digit pincode in the cart to check serviceability and estimated delivery days."}}
+]}
+</script>
+</head>
+
+<body>
+  
+
+  <div class="announcement">FREE SHIPPING ON ORDERS ABOVE ₹499 · USE CODE WELCOME10</div>
+  <header class="header">
+    <div class="container nav">
+     <a href="#" class="logo" aria-label="Mistvale Tea home">
+  <img src="images/logo.png" alt="Mistvale Tea Logo">
+  <span>MISTVALE TEA</span>
+</a>
+      <nav class="nav-links" aria-label="Primary navigation"><a href="#shop">Shop</a><a href="#story">Our Story</a><a
+          href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+      <div class="nav-actions"><label class="search"><span class="visually-hidden">Search products</span><input
+            id="search" type="search" placeholder="Search tea…" autocomplete="off"></label><button class="cart-btn"
+          id="cart-open" aria-label="Open shopping cart">Cart <span class="cart-count" id="cart-count">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Small-batch · Thoughtfully sourced</div>
+          <h1>Tea for slower, better moments.</h1>
+          <p>Discover balanced black, green and herbal blends made for everyday rituals, quiet mornings and thoughtful
+            gifting.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#shop">Shop the collection</a><a
+              class="btn btn-secondary" href="#story">Our story</a></div>
+        </div>
+        <div class="hero-art">
+  <img src="images/hero-banner.png" alt="Mistvale Tea">
+</div>
+      </div>
+    </section>
+
+    <section class="section" id="shop">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">The collection</div>
+            <h2>Find your daily cup.</h2>
+            <p class="section-intro">Explore familiar favourites, fragrant infusions and a gift box for tea lovers.</p>
+          </div>
+        </div>
+        <div class="filters" id="filters" aria-label="Product categories">
+          <button class="filter active" data-category="all">All</button><button class="filter"
+            data-category="Black">Black</button><button class="filter" data-category="Green">Green</button><button
+            class="filter" data-category="Herbal">Herbal</button><button class="filter"
+            data-category="Gifts">Gifts</button>
+        </div>
+        <div class="toolbar"><span id="result-count" class="section-intro"></span><select id="sort" class="sort"
+            aria-label="Sort products">
+            <option value="default">Sort: Featured</option>
+            <option value="price-low">Price: Low to high</option>
+            <option value="price-high">Price: High to low</option>
+            <option value="rating">Rating</option>
+            <option value="name">Name</option>
+          </select></div>
+        <div class="products" id="products"></div>
+      </div>
+    </section>
+
+    <section class="section" id="story">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Why Mistvale</div>
+            <h2>A calmer way to shop tea.</h2>
+          </div>
+        </div>
+        <div class="features">
+          <article class="feature"><b>Thoughtful selection</b>
+            <p>A focused collection across black, green, herbal and gifting options.</p>
+          </article>
+          <article class="feature"><b>Simple shopping</b>
+            <p>Search, filter, sort, wishlist, quick view and cart controls designed for fewer clicks.</p>
+          </article>
+          <article class="feature"><b>Made for gifting</b>
+            <p>Discover a dedicated sampler gift box alongside everyday blends.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Questions</div>
+            <h2>Tea FAQ</h2>
+          </div>
+        </div>
+        <div class="faq">
+          <details class="faq-item">
+            <summary>How should I store tea?</summary>
+            <p>Store tea sealed in a cool, dry place away from direct sunlight, moisture and strong odours.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you offer gift boxes?</summary>
+            <p>Yes. The current collection includes the Tea Lover's Sampler Gift Box.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I check delivery serviceability?</summary>
+            <p>Yes. Open the cart and enter a valid six-digit pincode to check serviceability and estimated delivery
+              days.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container newsletter">
+        <div>
+          <div class="eyebrow" style="color:#d6b36a">Stay in the loop</div>
+          <h2 style="font-family:Georgia,serif;margin:8px 0;font-size:34px">Tea notes, not noise.</h2>
+          <p>Get occasional updates about new blends, gifting and offers.</p>
+        </div>
+        <form class="news-form" id="newsletter"><input id="newsletter-email" type="email"
+            placeholder="Your email address" aria-label="Email address" required><button
+            type="submit">Subscribe</button></form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container footer-grid">
+      <div>
+        <h3>MISTVALE TEA</h3>
+        <p>Premium tea for everyday rituals and thoughtful gifting.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <p><a href="#shop">Shop</a></p>
+        <p><a href="#story">Our Story</a></p>
+        <p><a href="#faq">FAQ</a></p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>MeroxIO IT Solutions · E 215, Sector 63, Noida</p>
+        <p>info@meroxio.com</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">© 2026 Mistvale Tea. All rights reserved.</div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="cart-drawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-head">
+      <h2 style="margin:0;font:700 25px Georgia,serif">Your cart</h2><button class="close" id="cart-close"
+        aria-label="Close cart">×</button>
+    </div>
+    <div class="drawer-body">
+      <div id="cart-items"></div>
+      <div class="pin"><input id="pincode" inputmode="numeric" maxlength="6" placeholder="6-digit pincode"
+          aria-label="Pincode"><button id="pin-check">Check</button></div>
+      <div id="pin-result" class="notice" aria-live="polite"></div>
+    </div>
+    <div class="cart-footer">
+      <div class="coupon"><input id="coupon" placeholder="Coupon code" aria-label="Coupon code"><button
+          id="coupon-btn">Apply</button></div>
+      <div id="coupon-result" class="notice" aria-live="polite"></div>
+      <div class="summary-row"><span>Subtotal</span><b id="subtotal">₹0</b></div>
+      <div class="summary-row"><span>Discount</span><b id="discount">₹0</b></div>
+      <div class="summary-row"><span>Shipping</span><b id="shipping">₹0</b></div>
+      <div id="shipping-note" class="notice"></div>
+      <div class="summary-row total"><span>Total</span><b id="total">₹0</b></div>
+      <button class="btn btn-primary" style="width:100%;margin-top:10px" id="checkout">Proceed to checkout</button>
+    </div>
+  </aside>
+
+  <div class="quickview" id="quickview" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="quick-grid">
+      <div class="quick-art">
+        <div class="tea-cup"></div>
+      </div>
+      <div class="quick-copy">
+        <div style="display:flex;justify-content:space-between">
+          <div class="eyebrow">Quick view</div><button class="close" id="quick-close"
+            aria-label="Close quick view">×</button>
+        </div>
+        <div id="quick-content"></div>
+      </div>
+    </div>
+  </div>
+  <form id="checkout-form" action="https://mistvale.example/cart/checkout" method="POST" style="display:none"><input
+      type="hidden" name="items" id="checkout-items"><input type="hidden" name="coupon" id="checkout-coupon"></form>
+  <div class="toast" id="toast" aria-live="polite"></div>
+
+  <script>
+
+  var PRODUCTS = [
+  {
+    id: 101,
+    name: "Assam Breakfast Black Tea",
+    category: "Black",
+    price: 349,
+    stock: 40,
+    image: "images/p101.png",
+    description: "Bold, malty black tea for a strong everyday cup."
+  },
+  {
+    id: 102,
+    name: "Darjeeling First Flush",
+    category: "Black",
+    price: 1299,
+    stock: 12,
+    image: "images/p102.png",
+    rating: 4.8,
+    reviews: 128,
+    description: "A delicate first-flush tea with floral notes."
+  },
+  {
+    id: 103,
+    name: "Kashmiri Kahwa",
+    category: "Green",
+    price: 549,
+    stock: 25,
+    image: "images/p103.png",
+    description: "Fragrant green tea with warming spices."
+  },
+  {
+    id: 104,
+    name: "Masala Chai Blend",
+    category: "Black",
+    price: 399,
+    stock: 60,
+    image: "images/p104.png",
+    rating: 4.7,
+    reviews: 342,
+    description: "A warming black tea blend with classic chai spices."
+  },
+  {
+    id: 105,
+    name: "Nilgiri Green Tea",
+    category: "Green",
+    price: 449,
+    stock: 30,
+    image: "images/p105.png",
+    description: "Bright and refreshing green tea."
+  },
+  {
+    id: 106,
+    name: "Chamomile & Tulsi",
+    category: "Herbal",
+    price: 499,
+    stock: 18,
+    image: "images/p106.png",
+    description: "A calming herbal infusion with chamomile and tulsi."
+  },
+  {
+    id: 107,
+    name: "Hibiscus Rose Infusion",
+    category: "Herbal",
+    price: 599,
+    stock: 0,
+    image: "images/p107.png",
+    description: "A vibrant floral infusion with hibiscus and rose."
+  },
+  {
+    id: 108,
+    name: "Tea Lover's Sampler Gift Box",
+    category: "Gifts",
+    price: 1899,
+    stock: 9,
+    image: "images/p108.png",
+    description: "A curated selection made for tea lovers and gifting."
+  }
+];
+
+
+    // ======================================================
+    // SIMULATED STORE API
+    // ======================================================
+
+    var API = {
+
+      search: function (query) {
+
+        var q = String(query || "")
+          .toLowerCase()
+          .trim();
+
+        return new Promise(function (resolve) {
+
+          setTimeout(function () {
+
+            var results = PRODUCTS
+              .filter(function (product) {
+
+                var text =
+                  product.name + " " +
+                  product.category + " " +
+                  (product.description || "");
+
+                return text
+                  .toLowerCase()
+                  .indexOf(q) !== -1;
+
+              })
+              .map(function (product) {
+                return product.id;
+              });
+
+            resolve(results);
+
+          }, 120);
+
+        });
+
+      },
+
+
+      checkPincode: function (pin) {
+
+        return new Promise(function (resolve, reject) {
+
+          setTimeout(function () {
+
+            if (!/^\d{6}$/.test(String(pin || ""))) {
+
+              reject(new Error("INVALID_PINCODE"));
+
+              return;
+            }
+
+            var serviceablePins = [
+              "110001",
+              "110002",
+              "110003",
+              "110004",
+              "110005",
+              "201301",
+              "201305",
+              "122001",
+              "800001"
+            ];
+
+            var serviceable =
+              serviceablePins.indexOf(String(pin)) !== -1;
+
+            resolve({
+              serviceable: serviceable,
+              days: serviceable ? 3 : null
+            });
+
+          }, 250);
+
+        });
+
+      }
+
+    };
+
+
+    // ======================================================
+    // HELPER FUNCTIONS
+    // ======================================================
+
+    function getNumber(value) {
+
+      return Number(value) || 0;
+
+    }
+
+
+    function money(value) {
+
+      return "₹" +
+        Math.round(getNumber(value))
+          .toLocaleString("en-IN");
+
+    }
+
+
+    function getProduct(id) {
+
+      return PRODUCTS.find(function (product) {
+
+        return product.id === Number(id);
+
+      });
+
+    }
+
+
+    function saveCart() {
+
+      localStorage.setItem(
+        "mv_cart",
+        JSON.stringify(cart)
+      );
+
+      updateCount();
+
+    }
+
+
+    function toast(message) {
+
+      var element =
+        document.getElementById("toast");
+
+      if (!element) return;
+
+      element.textContent = message;
+
+      element.classList.add("show");
+
+      clearTimeout(window.__toast);
+
+      window.__toast = setTimeout(function () {
+
+        element.classList.remove("show");
+
+      }, 2200);
+
+    }
+
+
+    function safeText(value) {
+
+      return String(
+        value == null ? "" : value
+      ).replace(
+        /[&<>"']/g,
+        function (character) {
+
+          return {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#39;"
+          }[character];
+
+        }
+      );
+
+    }
+
+
+    // ======================================================
+    // CART INITIALIZATION
+    // ======================================================
+
+    var cart = [];
+
+    try {
+
+      var savedCart =
+        localStorage.getItem("mv_cart");
+
+      if (savedCart) {
+
+        cart = JSON.parse(savedCart);
+
+      }
+
+    } catch (error) {
+
+      cart = [];
+
+    }
+
+
+    if (!Array.isArray(cart)) {
+
+      cart = [];
+
+    }
+
+
+    cart = cart.filter(function (item) {
+
+      return (
+        item &&
+        getNumber(item.id) > 0 &&
+        getNumber(item.qty) > 0
+      );
+
+    });
+
+
+    // ======================================================
+    // GLOBAL STATE
+    // ======================================================
+
+    var discount = 0;
+
+    var appliedCoupon = "";
+
+    var currentCategory = "all";
+
+    var currentSearch = "";
+
+    var currentSort = "default";
+
+    var searchRequestId = 0;
+
+
+    // ======================================================
+    // WISHLIST
+    // ======================================================
+
+    var wishlist = [];
+
+    try {
+
+      var savedWishlist =
+        localStorage.getItem("mv_wishlist");
+
+      if (savedWishlist) {
+
+        wishlist = JSON.parse(savedWishlist);
+
+      }
+
+    } catch (error) {
+
+      wishlist = [];
+
+    }
+
+
+    if (!Array.isArray(wishlist)) {
+
+      wishlist = [];
+
+    }
+
+
+    // ======================================================
+    // RENDER PRODUCTS
+    // ======================================================
+
+    function renderProducts(list) {
+
+      var root =
+        document.getElementById("products");
+
+      var resultCount =
+        document.getElementById("result-count");
+
+
+      if (!root) return;
+
+
+      if (resultCount) {
+
+        resultCount.textContent =
+          list.length +
+          " " +
+          (list.length === 1
+            ? "product"
+            : "products");
+
+      }
+
+
+      if (!list.length) {
+
+        root.innerHTML =
+          '<div class="empty">' +
+          '<strong>No tea found.</strong><br>' +
+          'Try another search or category.' +
+          '</div>';
+
+        return;
+
+      }
+
+
+      root.innerHTML = list.map(function (product) {
+
+        var wished =
+          wishlist.indexOf(product.id) !== -1;
+
+        var sold =
+          Number(product.stock) <= 0;
+
+        var rating =
+          product.rating
+            ? "★ " +
+            product.rating +
+            " · " +
+            (product.reviews || 0) +
+            " reviews"
+            : "Freshly selected";
+
+
+        return (
+
+  '<article class="card">' +
+
+  '<div ' +
+  'class="product-image" ' +
+  'role="button" ' +
+  'tabindex="0" ' +
+  'data-quick="' +
+  product.id +
+  '" ' +
+  'aria-label="Quick view ' +
+  safeText(product.name) +
+  '">' +
+
+  '<img ' +
+  'src="' +
+  product.image +
+  '" ' +
+  'alt="' +
+  safeText(product.name) +
+  '" ' +
+  'loading="lazy">' +
+
+  (
+    sold
+      ? '<span class="badge">SOLD OUT</span>'
+      : ""
+  ) +
+
+  '<button ' +
+  'class="wish ' +
+  (wished ? "active" : "") +
+  '" ' +
+  'data-wish="' +
+  product.id +
+  '" ' +
+  'aria-label="' +
+  (
+    wished
+      ? "Remove from wishlist"
+      : "Add to wishlist"
+  ) +
+  '">' +
+
+  (wished ? "♥" : "♡") +
+
+  '</button>' +
+
+  '</div>' +
+
+  '<div class="product-body">' +
+
+  '<div class="category">' +
+  safeText(product.category) +
+  '</div>' +
+
+  '<div class="product-title">' +
+  safeText(product.name) +
+  '</div>' +
+
+  '<div class="rating">' +
+  rating +
+  '</div>' +
+
+  '<div class="price-row">' +
+
+  '<span class="price">' +
+  money(product.price) +
+  '</span>' +
+
+  (
+    sold
+
+      ? '<span class="sold">' +
+        'Currently unavailable' +
+        '</span>'
+
+      : '<button ' +
+        'class="add" ' +
+        'data-add="' +
+        product.id +
+        '">' +
+        'Add to cart' +
+        '</button>'
+  ) +
+
+  '</div>' +
+
+  '</div>' +
+
+  '</article>'
+
+);
+
+}).join("");
+
+}
+
+    // ======================================================
+    // FILTER + SORT
+    // ======================================================
+
+    function getFilteredProducts() {
+
+      var list = PRODUCTS.filter(function (product) {
+
+        var categoryOk =
+          currentCategory === "all" ||
+          product.category.toLowerCase() ===
+          currentCategory.toLowerCase();
+
+
+        var q =
+          currentSearch.toLowerCase();
+
+
+        var searchableText =
+          product.name +
+          " " +
+          product.category +
+          " " +
+          (product.description || "");
+
+
+        var searchOk =
+          !q ||
+          searchableText
+            .toLowerCase()
+            .indexOf(q) !== -1;
+
+
+        return categoryOk && searchOk;
+
+      });
+
+
+      if (currentSort === "price-low") {
+
+        list.sort(function (a, b) {
+
+          return a.price - b.price;
+
+        });
+
+      }
+
+
+      if (currentSort === "price-high") {
+
+        list.sort(function (a, b) {
+
+          return b.price - a.price;
+
+        });
+
+      }
+
+
+      if (currentSort === "rating") {
+
+        list.sort(function (a, b) {
+
+          return (
+            (b.rating || 0) -
+            (a.rating || 0)
+          );
+
+        });
+
+      }
+
+
+      if (currentSort === "name") {
+
+        list.sort(function (a, b) {
+
+          return a.name.localeCompare(
+            b.name
+          );
+
+        });
+
+      }
+
+
+      return list;
+
+    }
+
+
+    function updateProducts() {
+
+      renderProducts(
+        getFilteredProducts()
+      );
+
+    }
+
+
+    // ======================================================
+    // SEARCH
+    // ======================================================
+
+    function performSearch(value) {
+
+      currentSearch =
+        String(value || "").trim();
+
+
+      var requestId =
+        ++searchRequestId;
+
+
+      if (!currentSearch) {
+
+        updateProducts();
+
+        return;
+
+      }
+
+
+      API.search(currentSearch)
+
+        .then(function (ids) {
+
+          if (
+            requestId !==
+            searchRequestId
+          ) {
+            return;
+          }
+
+
+          var idSet = {};
+
+
+          ids.forEach(function (id) {
+
+            idSet[Number(id)] = true;
+
+          });
+
+
+          var filtered =
+            getFilteredProducts()
+              .filter(function (product) {
+
+                return !!idSet[product.id];
+
+              });
+
+
+          renderProducts(filtered);
+
+        })
+
+        .catch(function () {
+
+          if (
+            requestId ===
+            searchRequestId
+          ) {
+
+            updateProducts();
+
+          }
+
+        });
+
+    }
+
+
+    // ======================================================
+    // WISHLIST
+    // ======================================================
+
+    function toggleWish(id) {
+
+      id = Number(id);
+
+
+      var index =
+        wishlist.indexOf(id);
+
+
+      if (index === -1) {
+
+        wishlist.push(id);
+
+        toast("Added to wishlist");
+
+      } else {
+
+        wishlist.splice(index, 1);
+
+        toast("Removed from wishlist");
+
+      }
+
+
+      localStorage.setItem(
+        "mv_wishlist",
+        JSON.stringify(wishlist)
+      );
+
+
+      updateProducts();
+
+    }
+
+
+    // ======================================================
+    // QUICK VIEW
+    // ======================================================
+
+    function openQuickView(id) {
+
+      var product =
+        getProduct(id);
+
+
+      if (!product) return;
+
+
+      var sold =
+        Number(product.stock) <= 0;
+
+
+      var quickContent =
+        document.getElementById(
+          "quick-content"
+        );
+
+
+      if (!quickContent) return;
+
+
+      quickContent.innerHTML =
+
+        '<div class="category" ' +
+        'style="margin-top:24px">' +
+        safeText(product.category) +
+        '</div>' +
+
+        '<h2 style="' +
+        'font:700 32px/1.1 Georgia,serif;' +
+        'margin:8px 0">' +
+        safeText(product.name) +
+        '</h2>' +
+
+        '<p style="color:var(--muted)">' +
+        safeText(
+          product.description ||
+          "A thoughtfully selected tea for your everyday ritual."
+        ) +
+        '</p>' +
+
+        '<p style="' +
+        'font-size:22px;' +
+        'font-weight:850">' +
+        money(product.price) +
+        '</p>' +
+
+        (
+          product.rating
+
+            ? '<p class="rating">' +
+            "★ " +
+            product.rating +
+            " · " +
+            (product.reviews || 0) +
+            " reviews" +
+            '</p>'
+
+            : ""
+        ) +
+
+        (
+          sold
+
+            ? '<p class="sold">' +
+            "Currently unavailable" +
+            '</p>'
+
+            : '<button ' +
+            'class="btn btn-primary" ' +
+            'data-quick-add="' +
+            product.id +
+            '">' +
+            'Add to cart' +
+            '</button>'
+        );
+
+
+      var quickView =
+        document.getElementById(
+          "quickview"
+        );
+
+
+      var overlay =
+        document.getElementById(
+          "overlay"
+        );
+
+
+      if (quickView) {
+
+        quickView.classList.add("open");
+
+        quickView.setAttribute(
+          "aria-hidden",
+          "false"
+        );
+
+      }
+
+
+      if (overlay) {
+
+        overlay.classList.add("open");
+
+      }
+
+    }
+
+
+    function closeQuickView() {
+
+      var quickView =
+        document.getElementById(
+          "quickview"
+        );
+
+
+      var cartDrawer =
+        document.getElementById(
+          "cart-drawer"
+        );
+
+
+      var overlay =
+        document.getElementById(
+          "overlay"
+        );
+
+
+      if (quickView) {
+
+        quickView.classList.remove(
+          "open"
+        );
+
+        quickView.setAttribute(
+          "aria-hidden",
+          "true"
+        );
+
+      }
+
+
+      if (
+        overlay &&
+        cartDrawer &&
+        !cartDrawer.classList.contains("open")
+      ) {
+
+        overlay.classList.remove(
+          "open"
+        );
+
+      }
+
+    }
+
+
+    // ======================================================
+    // ADD TO CART
+    // ======================================================
+
+    function addToCart(id, quantity) {
+
+      var product =
+        getProduct(id);
+
+
+      if (
+        !product ||
+        Number(product.stock) <= 0
+      ) {
+
+        toast(
+          "This item is sold out."
+        );
+
+        return;
+
+      }
+
+
+      quantity =
+        Math.max(
+          1,
+          Number(quantity) || 1
+        );
+
+
+      var max =
+        Math.min(
+          Number(product.stock),
+          5
+        );
+
+
+      var existing =
+        cart.find(function (item) {
+
+          return item.id === product.id;
+
+        });
+
+
+      var current =
+        existing
+          ? Number(existing.qty)
+          : 0;
+
+
+      var next =
+        Math.min(
+          current + quantity,
+          max
+        );
+
+
+      if (existing) {
+
+        existing.qty = next;
+
+      } else {
+
+        cart.push({
+          id: product.id,
+          qty: Math.min(
+            quantity,
+            max
+          )
+        });
+
+      }
+
+
+      saveCart();
+
+      renderCart();
+
+      toast(
+        product.name +
+        " added to cart"
+      );
+
+    }
+
+
+    // ======================================================
+    // CART COUNT
+    // ======================================================
+
+    function updateCount() {
+
+      var countElement =
+        document.getElementById(
+          "cart-count"
+        );
+
+
+      if (!countElement) return;
+
+
+      var count =
+        cart.reduce(
+          function (total, item) {
+
+            return (
+              total +
+              Number(item.qty || 0)
+            );
+
+          },
+          0
+        );
+
+
+      countElement.textContent =
+        count;
+
+    }
+
+
+    // ======================================================
+    // RENDER CART
+    // ======================================================
+
+    function renderCart() {
+
+      var root =
+        document.getElementById(
+          "cart-items"
+        );
+
+
+      if (!root) return;
+
+
+      if (!cart.length) {
+
+        root.innerHTML =
+          '<div class="empty">' +
+          'Your cart is empty.<br>' +
+          '<a href="#shop" ' +
+          'onclick="closeCart()">' +
+          'Explore the collection' +
+          '</a>' +
+          '</div>';
+
+
+        updateTotals();
+
+        return;
+
+      }
+
+
+      root.innerHTML =
+        cart.map(function (item) {
+
+          var product =
+            getProduct(item.id);
+
+
+          if (!product) {
+            return "";
+          }
+
+
+          return (
+
+            '<div class="cart-item">' +
+
+            '<div class="cart-thumb">' +
+            '🍵' +
+            '</div>' +
+
+            '<div>' +
+
+            '<h4>' +
+            safeText(product.name) +
+            '</h4>' +
+
+            '<div>' +
+            money(product.price) +
+            '</div>' +
+
+            '<div class="qty" ' +
+            'style="margin-top:8px">' +
+
+            '<button ' +
+            'data-minus="' +
+            product.id +
+            '" ' +
+            'aria-label="Decrease quantity">' +
+            '−' +
+            '</button>' +
+
+            '<b>' +
+            item.qty +
+            '</b>' +
+
+            '<button ' +
+            'data-plus="' +
+            product.id +
+            '" ' +
+            'aria-label="Increase quantity">' +
+            '+' +
+            '</button>' +
+
+            '</div>' +
+
+            '<button ' +
+            'class="remove" ' +
+            'data-remove="' +
+            product.id +
+            '">' +
+            'Remove' +
+            '</button>' +
+
+            '</div>' +
+
+            '<b>' +
+            money(
+              product.price *
+              item.qty
+            ) +
+            '</b>' +
+
+            '</div>'
+
+          );
+
+        }).join("");
+
+
+      updateTotals();
+
+    }
+
+
+    // ======================================================
+    // QUANTITY
+    // ======================================================
+
+    function setQty(id, quantity) {
+
+      var product =
+        getProduct(id);
+
+
+      var item =
+        cart.find(function (cartItem) {
+
+          return (
+            cartItem.id ===
+            Number(id)
+          );
+
+        });
+
+
+      if (
+        !product ||
+        !item
+      ) {
+        return;
+      }
+
+
+      var max =
+        Math.min(
+          Number(product.stock),
+          5
+        );
+
+
+      quantity =
+        Math.max(
+          1,
+          Math.min(
+            Number(quantity) || 1,
+            max
+          )
+        );
+
+
+      item.qty =
+        quantity;
+
+
+      saveCart();
+
+      renderCart();
+
+    }
+
+
+    function removeItem(id) {
+
+      id = Number(id);
+
+
+      cart =
+        cart.filter(function (item) {
+
+          return item.id !== id;
+
+        });
+
+
+      saveCart();
+
+      renderCart();
+
+      toast("Item removed");
+
+    }
+
+
+    // ======================================================
+    // SUBTOTAL
+    // ======================================================
+
+    function getSubtotal() {
+
+      return cart.reduce(
+        function (total, item) {
+
+          var product =
+            getProduct(item.id);
+
+
+          if (!product) {
+            return total;
+          }
+
+
+          return (
+            total +
+            product.price *
+            Number(item.qty)
+          );
+
+        },
+        0
+      );
+
+    }
+
+
+    // ======================================================
+    // COUPON
+    // ======================================================
+
+    function applyCoupon() {
+
+      var couponInput =
+        document.getElementById(
+          "coupon"
+        );
+
+
+      var result =
+        document.getElementById(
+          "coupon-result"
+        );
+
+
+      if (!couponInput || !result) {
+        return;
+      }
+
+
+      var code =
+        couponInput.value
+          .trim()
+          .toUpperCase();
+
+
+      var subtotal =
+        getSubtotal();
+
+
+      discount = 0;
+
+      appliedCoupon = "";
+
+
+      if (!code) {
+
+        result.textContent =
+          "Enter a coupon code.";
+
+        result.className =
+          "notice error";
+
+        updateTotals();
+
+        return;
+
+      }
+
+
+      if (code === "WELCOME10") {
+
+        if (subtotal < 499) {
+
+          result.textContent =
+            "WELCOME10 requires a minimum subtotal of ₹499.";
+
+          result.className =
+            "notice error";
+
+        } else {
+
+          discount =
+            Math.min(
+              Math.round(
+                subtotal * 0.10
+              ),
+              250
+            );
+
+
+          appliedCoupon =
+            code;
+
+
+          result.textContent =
+            "WELCOME10 applied. You saved " +
+            money(discount) +
+            ".";
+
+
+          result.className =
+            "notice success";
+
+        }
+
+      } else {
+
+        result.textContent =
+          "Invalid coupon code.";
+
+        result.className =
+          "notice error";
+
+      }
+
+
+      updateTotals();
+
+    }
+
+
+    // ======================================================
+    // TOTALS
+    // ======================================================
+
+    function updateTotals() {
+
+      var subtotal =
+        getSubtotal();
+
+
+      if (discount > subtotal) {
+
+        discount =
+          subtotal;
+
+      }
+
+
+      var afterDiscount =
+        Math.max(
+          0,
+          subtotal - discount
+        );
+
+
+      var shipping =
+        afterDiscount >= 600 ||
+          afterDiscount === 0
+          ? 0
+          : 49;
+
+
+      var total =
+        Math.round(
+          afterDiscount +
+          shipping
+        );
+
+
+      var subtotalElement =
+        document.getElementById(
+          "subtotal"
+        );
+
+
+      var discountElement =
+        document.getElementById(
+          "discount"
+        );
+
+
+      var shippingElement =
+        document.getElementById(
+          "shipping"
+        );
+
+
+      var totalElement =
+        document.getElementById(
+          "total"
+        );
+
+
+      if (subtotalElement) {
+
+        subtotalElement.textContent =
+          money(subtotal);
+
+      }
+
+
+      if (discountElement) {
+
+        discountElement.textContent =
+          discount
+            ? "−" + money(discount)
+            : money(0);
+
+      }
+
+
+      if (shippingElement) {
+
+        shippingElement.textContent =
+          money(shipping);
+
+      }
+
+
+      if (totalElement) {
+
+        totalElement.textContent =
+          money(total);
+
+      }
+
+
+      var note =
+        document.getElementById(
+          "shipping-note"
+        );
+
+
+      if (!note) return;
+
+
+      if (subtotal === 0) {
+
+        note.textContent = "";
+
+      } else if (
+        afterDiscount >= 600
+      ) {
+
+        note.textContent =
+          "Free shipping unlocked.";
+
+      } else {
+
+        note.textContent =
+          "Add " +
+          money(
+            600 - afterDiscount
+          ) +
+          " more after discount for free shipping.";
+
+      }
+
+    }
+
+
+    // ======================================================
+    // PINCODE
+    // ======================================================
+
+    function checkPin() {
+
+      var pinInput =
+        document.getElementById(
+          "pincode"
+        );
+
+
+      var result =
+        document.getElementById(
+          "pin-result"
+        );
+
+
+      if (!pinInput || !result) {
+        return;
+      }
+
+
+      var pin =
+        pinInput.value.trim();
+
+
+      result.className =
+        "notice";
+
+
+      result.textContent =
+        "Checking…";
+
+
+      API.checkPincode(pin)
+
+        .then(function (data) {
+
+          result.className =
+            "notice " +
+            (
+              data.serviceable
+                ? "success"
+                : "error"
+            );
+
+
+          result.textContent =
+            data.serviceable
+
+              ? "Delivery available · " +
+              data.days +
+              " day(s) estimated."
+
+              : "Delivery is not available to this pincode.";
+
+        })
+
+        .catch(function (error) {
+
+          result.className =
+            "notice error";
+
+
+          if (
+            error &&
+            error.message ===
+            "INVALID_PINCODE"
+          ) {
+
+            result.textContent =
+              "Please enter a valid 6-digit pincode.";
+
+          } else {
+
+            result.textContent =
+              "Could not check this pincode. Please try again.";
+
+          }
+
+        });
+
+    }
+
+
+    // ======================================================
+    // CART OPEN / CLOSE
+    // ======================================================
+
+    function openCart() {
+
+      var drawer =
+        document.getElementById(
+          "cart-drawer"
+        );
+
+
+      var overlay =
+        document.getElementById(
+          "overlay"
+        );
+
+
+      if (drawer) {
+
+        drawer.classList.add(
+          "open"
+        );
+
+
+        drawer.setAttribute(
+          "aria-hidden",
+          "false"
+        );
+
+      }
+
+
+      if (overlay) {
+
+        overlay.classList.add(
+          "open"
+        );
+
+      }
+
+
+      renderCart();
+
+    }
+
+
+    function closeCart() {
+
+      var drawer =
+        document.getElementById(
+          "cart-drawer"
+        );
+
+
+      var quickView =
+        document.getElementById(
+          "quickview"
+        );
+
+
+      var overlay =
+        document.getElementById(
+          "overlay"
+        );
+
+
+      if (drawer) {
+
+        drawer.classList.remove(
+          "open"
+        );
+
+
+        drawer.setAttribute(
+          "aria-hidden",
+          "true"
+        );
+
+      }
+
+
+      if (
+        overlay &&
+        quickView &&
+        !quickView.classList.contains(
+          "open"
+        )
+      ) {
+
+        overlay.classList.remove(
+          "open"
+        );
+
+      }
+
+    }
+
+
+    // ======================================================
+    // CHECKOUT
+    // ======================================================
+
+    function checkout() {
+
+      if (!cart.length) {
+
+        toast(
+          "Your cart is empty."
+        );
+
+        return;
+
+      }
+
+
+      var itemsInput =
+        document.getElementById(
+          "checkout-items"
+        );
+
+
+      var couponInput =
+        document.getElementById(
+          "checkout-coupon"
+        );
+
+
+      var form =
+        document.getElementById(
+          "checkout-form"
+        );
+
+
+      if (!form) {
+
+        toast(
+          "Checkout form is missing."
+        );
+
+        return;
+
+      }
+
+
+      if (itemsInput) {
+
+        itemsInput.value =
+          JSON.stringify(cart);
+
+      }
+
+
+      if (couponInput) {
+
+        couponInput.value =
+          appliedCoupon;
+
+      }
+
+
+      form.submit();
+
+    }
+
+
+    // ======================================================
+    // DOM READY
+    // ======================================================
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      function () {
+
+
+        // ----------------------------
+        // FILTERS
+        // ----------------------------
+
+        var filters =
+          document.getElementById(
+            "filters"
+          );
+
+
+        if (filters) {
+
+          filters.addEventListener(
+            "click",
+            function (event) {
+
+              var button =
+                event.target.closest(
+                  "[data-category]"
+                );
+
+
+              if (!button) {
+                return;
+              }
+
+
+              currentCategory =
+                button.dataset.category;
+
+
+              document
+                .querySelectorAll(
+                  ".filter"
+                )
+                .forEach(
+                  function (element) {
+
+                    element.classList.toggle(
+                      "active",
+                      element === button
+                    );
+
+                  }
+                );
+
+
+              updateProducts();
+
+            }
+          );
+
+        }
+
+
+        // ----------------------------
+        // SORT
+        // ----------------------------
+
+        var sort =
+          document.getElementById(
+            "sort"
+          );
+
+
+        if (sort) {
+
+          sort.addEventListener(
+            "change",
+            function (event) {
+
+              currentSort =
+                event.target.value;
+
+              updateProducts();
+
+            }
+          );
+
+        }
+
+
+        // ----------------------------
+        // SEARCH
+        // ----------------------------
+
+        var search =
+          document.getElementById(
+            "search"
+          );
+
+
+        var searchTimer;
+
+
+        if (search) {
+
+          search.addEventListener(
+            "input",
+            function (event) {
+
+              clearTimeout(
+                searchTimer
+              );
+
+
+              var value =
+                event.target.value;
+
+
+              searchTimer =
+                setTimeout(
+                  function () {
+
+                    performSearch(
+                      value
+                    );
+
+                  },
+                  220
+                );
+
+            }
+          );
+
+        }
+
+
+        // ----------------------------
+        // PRODUCT CLICK
+        // ----------------------------
+
+        var products =
+          document.getElementById(
+            "products"
+          );
+
+
+        if (products) {
+
+          products.addEventListener(
+            "click",
+            function (event) {
+
+
+              var wish =
+                event.target.closest(
+                  "[data-wish]"
+                );
+
+
+              if (wish) {
+
+                event.stopPropagation();
+
+                toggleWish(
+                  wish.dataset.wish
+                );
+
+                return;
+
+              }
+
+
+              var add =
+                event.target.closest(
+                  "[data-add]"
+                );
+
+
+              if (add) {
+
+                event.stopPropagation();
+
+                addToCart(
+                  add.dataset.add
+                );
+
+                return;
+
+              }
+
+
+              var quick =
+                event.target.closest(
+                  "[data-quick]"
+                );
+
+
+              if (quick) {
+
+                openQuickView(
+                  quick.dataset.quick
+                );
+
+              }
+
+            }
+          );
+
+
+          products.addEventListener(
+            "keydown",
+            function (event) {
+
+              if (
+                event.key === "Enter" ||
+                event.key === " "
+              ) {
+
+                var quick =
+                  event.target.closest(
+                    "[data-quick]"
+                  );
+
+
+                if (
+                  quick &&
+                  !event.target.closest(
+                    "button"
+                  )
+                ) {
+
+                  event.preventDefault();
+
+
+                  openQuickView(
+                    quick.dataset.quick
+                  );
+
+                }
+
+              }
+
+            }
+          );
+
+        }
+
+
+        // ----------------------------
+        // CART ITEM BUTTONS
+        // ----------------------------
+
+        var cartItems =
+          document.getElementById(
+            "cart-items"
+          );
+
+
+        if (cartItems) {
+
+          cartItems.addEventListener(
+            "click",
+            function (event) {
+
+
+              var plus =
+                event.target.closest(
+                  "[data-plus]"
+                );
+
+
+              var minus =
+                event.target.closest(
+                  "[data-minus]"
+                );
+
+
+              var remove =
+                event.target.closest(
+                  "[data-remove]"
+                );
+
+
+              if (plus) {
+
+                var plusItem =
+                  cart.find(
+                    function (item) {
+
+                      return (
+                        item.id ===
+                        Number(
+                          plus.dataset.plus
+                        )
+                      );
+
+                    }
+                  );
+
+
+                if (plusItem) {
+
+                  setQty(
+                    plusItem.id,
+                    plusItem.qty + 1
+                  );
+
+                }
+
+              }
+
+
+              if (minus) {
+
+                var minusItem =
+                  cart.find(
+                    function (item) {
+
+                      return (
+                        item.id ===
+                        Number(
+                          minus.dataset.minus
+                        )
+                      );
+
+                    }
+                  );
+
+
+                if (minusItem) {
+
+                  setQty(
+                    minusItem.id,
+                    minusItem.qty - 1
+                  );
+
+                }
+
+              }
+
+
+              if (remove) {
+
+                removeItem(
+                  remove.dataset.remove
+                );
+
+              }
+
+            }
+          );
+
+        }
+
+
+        // ----------------------------
+        // CART OPEN
+        // ----------------------------
+
+        var cartOpen =
+          document.getElementById(
+            "cart-open"
+          );
+
+
+        if (cartOpen) {
+
+          cartOpen.addEventListener(
+            "click",
+            openCart
+          );
+
+        }
+
+
+        // ----------------------------
+        // CART CLOSE
+        // ----------------------------
+
+        var cartClose =
+          document.getElementById(
+            "cart-close"
+          );
+
+
+        if (cartClose) {
+
+          cartClose.addEventListener(
+            "click",
+            closeCart
+          );
+
+        }
+
+
+        // ----------------------------
+        // QUICK VIEW CLOSE
+        // ----------------------------
+
+        var quickClose =
+          document.getElementById(
+            "quick-close"
+          );
+
+
+        if (quickClose) {
+
+          quickClose.addEventListener(
+            "click",
+            closeQuickView
+          );
+
+        }
+
+
+        // ----------------------------
+        // OVERLAY
+        // ----------------------------
+
+        var overlay =
+          document.getElementById(
+            "overlay"
+          );
+
+
+        if (overlay) {
+
+          overlay.addEventListener(
+            "click",
+            function () {
+
+              closeCart();
+
+              closeQuickView();
+
+            }
+          );
+
+        }
+
+
+        // ----------------------------
+        // COUPON
+        // ----------------------------
+
+        var couponButton =
+          document.getElementById(
+            "coupon-btn"
+          );
+
+
+        if (couponButton) {
+
+          couponButton.addEventListener(
+            "click",
+            applyCoupon
+          );
+
+        }
+
+
+        // ----------------------------
+        // PINCODE
+        // ----------------------------
+
+        var pinButton =
+          document.getElementById(
+            "pin-check"
+          );
+
+
+        if (pinButton) {
+
+          pinButton.addEventListener(
+            "click",
+            checkPin
+          );
+
+        }
+
+
+        // ----------------------------
+        // CHECKOUT
+        // ----------------------------
+
+        var checkoutButton =
+          document.getElementById(
+            "checkout"
+          );
+
+
+        if (checkoutButton) {
+
+          checkoutButton.addEventListener(
+            "click",
+            checkout
+          );
+
+        }
+
+
+        // ----------------------------
+        // QUICK VIEW ADD TO CART
+        // ----------------------------
+
+        var quickContent =
+          document.getElementById(
+            "quick-content"
+          );
+
+
+        if (quickContent) {
+
+          quickContent.addEventListener(
+            "click",
+            function (event) {
+
+              var button =
+                event.target.closest(
+                  "[data-quick-add]"
+                );
+
+
+              if (!button) {
+                return;
+              }
+
+
+              addToCart(
+                button.dataset.quickAdd
+              );
+
+
+              closeQuickView();
+
+            }
+          );
+
+        }
+
+
+        // ----------------------------
+        // NEWSLETTER
+        // ----------------------------
+
+        var newsletter =
+          document.getElementById(
+            "newsletter"
+          );
+
+
+        if (newsletter) {
+
+          newsletter.addEventListener(
+            "submit",
+            function (event) {
+
+              event.preventDefault();
+
+
+              var email =
+                document.getElementById(
+                  "newsletter-email"
+                );
+
+
+              if (
+                !email ||
+                !email.checkValidity()
+              ) {
+
+                if (email) {
+                  email.reportValidity();
+                }
+
+                return;
+
+              }
+
+
+              toast(
+                "Thanks! You are subscribed."
+              );
+
+
+              email.value = "";
+
+            }
+          );
+
+        }
+
+
+        // ----------------------------
+        // ESCAPE KEY
+        // ----------------------------
+
+        document.addEventListener(
+          "keydown",
+          function (event) {
+
+            if (
+              event.key === "Escape"
+            ) {
+
+              closeCart();
+
+              closeQuickView();
+
+            }
+
+          }
+        );
+
+
+        // ----------------------------
+        // INITIAL LOAD
+        // ----------------------------
+
+        updateProducts();
+
+        updateCount();
+
+        renderCart();
+
+      }
+
+    );
+
+  </script>
+</body>
+
+</html>
